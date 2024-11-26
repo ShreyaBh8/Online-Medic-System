@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Online Medical System - Admit Page</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                background-image: url('images/background.jpg'); 
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                color: #333;
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: rgba(255, 255, 255, 0.9);
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            header {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            header h1 {
+                font-size: 36px;
+                color: #007bff;
+            }
+
+            header p {
+                font-size: 18px;
+                color: #666;
+            }
+
+            .main-nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                gap: 20px;
+            }
+
+            .nav-item {
+                flex: 1 1 calc(33.333% - 20px);
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                padding: 20px;
+                transition: transform 0.3s ease;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 200px;
+            }
+
+            .nav-item:hover {
+                transform: translateY(-5px);
+            }
+
+            .nav-icon img {
+                width: 80px;
+                height: 80px;
+                object-fit: cover;
+                margin-bottom: 15px;
+            }
+
+            .nav-item h2 {
+                font-size: 20px;
+                color: #007bff;
+                margin-top: 10px;
+            }
+
+            .nav-item form {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            .nav-item button {
+                background: none;
+                border: none;
+                font-size: inherit;
+                font-family: inherit;
+                color: inherit;
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-item button:hover img {
+                opacity: 0.8;
+            }
+            .footer 
+            {
+                
+                font-size: 40px;
+                margin-left: 30px;
+            }
+            .footer a{
+                color: white;
+            }
+            
+
+        </style>
+    </head>
+    <body>
+       <div class="footer">
+            <a href="../homePage.html"><i class="fa-solid fa-circle-arrow-left"></i></a>
+            
+        </div>
+        <div class="container">
+            <header>
+                <h1>Online Medical System</h1>
+                <p>Welcome to the medical system portal</p>
+            </header>
+            
+
+            <section class="main-nav">
+                <div class="nav-item">
+                    <form action="../admin_doctor" method="post">
+                        <button type="submit">
+                            <div class="nav-icon"><img src="images/doctor.jpg" alt="Doctor"></div>
+                            <h2>Doctor</h2>
+                        </button>
+                    </form>
+                </div>
+                <div class="nav-item">
+                    <form action="../adminPatient" method="post">
+                        <button type="submit">
+                            <div class="nav-icon"><img src="images/patient.avif" alt="Patient"></div>
+                            <h2>Patient</h2>
+                        </button>
+                    </form>
+                </div>
+                <div class="nav-item">
+                    <form action="../account" method="post">
+                        <button type="submit">
+                            <div class="nav-icon"><img src="images/account.png" alt="Patient"></div>
+                            <h2>Account</h2>
+                        </button>
+                    </form>
+                </div>
+<!--                <div class="nav-item">
+                    <form action="../account" method="post">
+                        <button type="submit">
+                            <div class="nav-icon"><img src="images/account.png" alt="Account"></div>
+                            <h2>Account</h2>
+                        </button>
+                    </form>
+                </div>-->
+                <div class="nav-item">
+                    <form action="emergency.html" method="get">
+                        <button type="submit">
+                            <div class="nav-icon"><img src="images/emergency.jpg" alt="Emergency"></div>
+                            <h2>Emergency</h2>
+                        </button>
+                    </form>
+                </div>
+                <div class="nav-item">
+                    <form action="pharmacy-list.html" method="get">
+                        <button type="submit">
+                            <div class="nav-icon"><img src="images/pharmacy.jpg" alt="Pharmacy"></div>
+                            <h2>Pharmacy</h2>
+                        </button>
+                    </form>
+                </div>
+                <div class="nav-item">
+                    <form action="payments.html" method="get">
+                        <button type="submit">
+                            <div class="nav-icon"><img src="images/payment.jpg" alt="Payments"></div>
+                            <h2>Payments</h2>
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </div>
+        
+        
+    </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up Page</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: poppins;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e0e0e0;
+        }
+        .main-div {
+            background-color: white;
+            height: auto; 
+            width: 650px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            font-size: 20px;
+        }
+        h1 {
+            height: 80px;
+            background-color: #132e8e99;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        .input-div { 
+            padding: 20px;
+            text-align: center;
+        }
+        .input-div td{
+            padding: 10px;
+        }
+        .input-div input,
+        .input-div select{
+            width: calc(100% - 12px); 
+            height: 40px; 
+            padding: 10px; 
+            font-size: 16px;
+            margin-bottom: 12px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px;
+        }
+        .input-div label {
+            font-size: 16px;
+            font-weight: bold;
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+        .input-div input[type="submit"],
+        .input-div input[type="reset"] {
+            width: 100px;
+            height: 35px;
+            background-color: #132e8e99;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.2s ease;
+        }
+        .input-div input[type="submit"]:hover,
+        .input-div input[type="reset"]:hover {
+            background-color: #0b2069;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <h1>Sign Up</h1> 
+           <form method="post" action="../signInServlet">
+            <div class="input-div">
+                <table border="0" width="100%">
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" name="name" placeholder="Type your name" required></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="text" name="e_mail" placeholder="Type your email" required></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="password" name="password" required></td>
+                    </tr>                   
+                    <tr>
+                        <td><input type="reset" value="Refesh"></td>
+                        <td><input type="submit" value="Submit"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

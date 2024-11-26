@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Booking</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            body {
+
+                padding: 10px;
+                background: linear-gradient(45deg, #6687dac9, #1ba189);
+
+            }
+
+            .container {
+                inset: 0;
+                margin: auto;
+                margin-top: 50px;
+                max-width: 700px;
+                width: 100%;
+                background-color: #fff;
+                padding: 25px 30px;
+                border-radius: 5px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+            }
+
+            .top {
+                height: 79px;
+            }
+
+            .top p {
+                color: red;
+                display: none;
+            }
+
+            .container .title {
+                font-size: 25px;
+                font-weight: 500;
+                position: relative;
+                margin-bottom: 15px;
+            }
+
+            .container .title::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 3px;
+                width: 30px;
+                border-radius: 5px;
+                background: linear-gradient(45deg, #71d2e6, #9b59b6);
+            }
+
+            .content form .user-details {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin: 10px 0 12px 0;
+            }
+
+            form .user-details .input-box {
+                margin-bottom: 15px;
+                width: 45%;
+            }
+
+            form .input-box span.details {
+                display: block;
+                font-weight: 500;
+                margin-bottom: 5px;
+            }
+
+            .user-details .input-box input,select {
+                height: 45px;
+                width: 100%;
+                outline: none;
+                font-size: 16px;
+                border-radius: 5px;
+                padding-left: 15px;
+                border: 1px solid #ccc;
+                border-bottom-width: 2px;
+                transition: all 0.3s ease;
+            }
+            .select{
+                background-color: #c5cfd26e
+            }
+
+            .user-details .input-box input:focus {
+                border-color: #1ba189;
+            }
+
+
+
+            form .category {
+                display: flex;
+                width: 80%;
+                margin: 14px 0;
+                justify-content: space-between;
+            }
+
+            form .category label {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            form .category label .dot {
+                height: 18px;
+                width: 18px;
+                border-radius: 50%;
+                margin-right: 10px;
+                background: #d9d9d9;
+                border: 5px solid transparent;
+                transition: all 0.3s ease;
+            }
+
+            .gender-details {
+                font-size: 18px;
+                font-weight: 500;
+
+            }
+
+            .gender-details input {
+                margin: 0 10px;
+
+            }
+
+            .gender-details label {
+                margin: 0 30px;
+
+            }
+
+            input[type="radio"] {
+                width: 20px;
+                height: 20px;
+            }
+
+            .button {
+                height: 45px;
+                margin: 35px 0
+            }
+
+            .button button {
+                height: 100%;
+                width: 100%;
+                border-radius: 5px;
+                border: none;
+                color: #fff;
+                font-size: 18px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                background: linear-gradient(45deg, #6687dac9, #1ba189);
+            }
+
+            .button button:hover {
+                background: linear-gradient(-1355deg, #1ba189, #6687dac9);
+            }
+
+
+            @media(max-width: 584px) {
+                .container {
+                    max-width: 100%;
+                }
+
+                form .user-details .input-box {
+                    margin-bottom: 15px;
+                    width: 100%;
+                }
+
+                form .category {
+                    width: 100%;
+                }
+
+                .gender-details {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .gender-details label {
+                    margin-top: 15px;
+                }
+
+
+            }
+
+            @media(max-width: 459px) {
+                .container .content .category {
+                    flex-direction: column;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="top">
+                <div class="title">Booking</div>
+                <p>Please fill all the details</p>
+            </div>
+
+            <div class="content">
+                <form METHOD="POST" ACTION="../s3">
+                    <div class="user-details">
+                        <!-- Full Name -->
+                        <div class="input-box">
+                            <span class="details">Full Name</span>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <!-- Contact Number -->
+                        <div class="input-box">
+                            <span class="details">Phone Number</span>
+                            <input type="text" id="contact" name="contact" placeholder="Enter your number" required>
+                        </div>
+                        <!-- Chamber Location -->
+                        <div class="input-box">
+                            <span class="details">Chamber Location</span>
+                            <input type="text" id="add" name="add" placeholder="Enter chamber location">
+                        </div>
+                        <!-- Payment Amount (Fetched Dynamically) -->
+                        <div class="input-box">
+                            <span class="details">Payment</span>
+                            <input type="text" id="fee" name="fee" placeholder="Payment Amount" readonly>
+                        </div>
+                        <!-- Appointment Day -->
+                        <div class="input-box">
+                            <span class="details">Appointment Day</span>
+                            <input type="text" id="day" name="day" placeholder="Enter Day of appointment">
+                        </div>
+                    </div>
+                    <!-- Gender Details -->
+                    <div class="gender-details">
+                        <span class="details">Gender:</span>
+                        <label for="male">Male <input type="radio" name="mygender" id="male" value="male"></label>
+                        <label for="female">Female <input type="radio" name="mygender" id="female" value="female"></label>
+                        <label for="other">Other <input type="radio" name="mygender" id="other" value="other"></label>
+                    </div>
+                    <!-- Book Appointment Button -->
+                    <div class="button">
+                        <button id="bookAppointment" type="submit">Pay Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Fetch the stored fee value from localStorage
+                const fees = localStorage.getItem("fees") || "NULL";
+                const payment = document.querySelector("#fee");
+                payment.value = fees;
+                payment.readOnly = true;
+            });
+            
+            
+            const inputList = document.querySelectorAll('input')
+            const p = document.querySelector('p')
+            const btn = document.querySelector('button')
+            btn.addEventListener('click', (e) => {
+                const filled = [...inputList].every((input) => {
+                    return input.value
+                })
+                if (!filled) {
+                    e.preventDefault()
+                    p.style.display = 'block'
+                }
+            })
+            inputList.forEach((input) => {
+                input.addEventListener('focus', () => {
+                    p.style.display = 'none'
+
+                })
+            })
+        </script>
+    </body>
+
+</html>
+
+

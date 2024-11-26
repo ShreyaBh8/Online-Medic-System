@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f8fb;
+        }
+        
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+        
+        .ambulance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .ambulance-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .ambulance-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .card-image {
+            width: 100%;
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .card-content {
+            padding: 15px;
+        }
+        
+        .card-content h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+        
+        .card-content p {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 10px 0;
+        }
+        
+        .card-content a {
+            display: inline-block;
+            text-decoration: none;
+            background: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+        
+        .card-content a:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>Emergency Ambulance Services</header>
+
+    <div class="container">
+        <div class="ambulance-grid">
+            <!-- Ambulance 1 -->
+            <div class="ambulance-card">
+                <div class="card-image" style="background-image: url('https://rovenlogos.com/wp-content/uploads/2018/03/rovenlogos_emergency_light.png');"></div>
+                <div class="card-content">
+                    <h3>City Care Ambulance</h3>
+                    <p>Location: GT Road, Asansol</p>
+                    <p>Contact: +91 98000 12345</p>
+                    <a href="tel:+919800012345">Call Now</a>
+                </div>
+            </div>
+            <!-- Ambulance 2 -->
+            <div class="ambulance-card">
+                <div class="card-image" style="background-image: url('https://rovenlogos.com/wp-content/uploads/2018/03/rovenlogos_emergency_light.png');"></div>
+                <div class="card-content">
+                    <h3>Rapid Response Ambulance</h3>
+                    <p>Location: Burnpur Road, Asansol</p>
+                    <p>Contact: +91 98111 54321</p>
+                    <a href="tel:+919811154321">Call Now</a>
+                </div>
+            </div>
+            <!-- Ambulance 3 -->
+            <div class="ambulance-card">
+                <div class="card-image" style="background-image: url('https://rovenlogos.com/wp-content/uploads/2018/03/rovenlogos_emergency_light.png');"></div>
+                <div class="card-content">
+                    <h3>Asansol Emergency Services</h3>
+                    <p>Location: Ushagram, Asansol</p>
+                    <p>Contact: +91 98222 56789</p>
+                    <a href="tel:+919822256789">Call Now</a>
+                </div>
+            </div>
+            <!-- Ambulance 4 -->
+            <div class="ambulance-card">
+                <div class="card-image" style="background-image: url('https://rovenlogos.com/wp-content/uploads/2018/03/rovenlogos_emergency_light.png');"></div>
+                <div class="card-content">
+                    <h3>North Point Ambulance</h3>
+                    <p>Location: Chelidanga, Asansol</p>
+                    <p>Contact: +91 98333 98765</p>
+                    <a href="tel:+919833398765">Call Now</a>
+                </div>
+            </div>
+            <!-- Ambulance 5 -->
+            <div class="ambulance-card">
+                <div class="card-image" style="background-image: url('https://rovenlogos.com/wp-content/uploads/2018/03/rovenlogos_emergency_light.png');"></div>
+                <div class="card-content">
+                    <h3>FastTrack Ambulance</h3>
+                    <p>Location: Hutton Road, Asansol</p>
+                    <p>Contact: +91 98444 54321</p>
+                    <a href="tel:+919844454321">Call Now</a>
+                </div>
+            </div>
+            <!-- Ambulance 6 -->
+            <div class="ambulance-card">
+                <div class="card-image" style="background-image: url('https://rovenlogos.com/wp-content/uploads/2018/03/rovenlogos_emergency_light.png');"></div>
+                <div class="card-content">
+                    <h3>Golden Hour Ambulance</h3>
+                    <p>Location: Court Road, Asansol</p>
+                    <p>Contact: +91 98555 67890</p>
+                    <a href="tel:+919855567890">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

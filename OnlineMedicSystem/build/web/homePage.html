@@ -1,0 +1,710 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Care System</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <style>
+        * {
+            scroll-behavior: smooth;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            font-family: poppins;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .navbar {
+
+            background-color: #709d9bd4;
+            position: fixed;
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 20px;
+            z-index: 10;
+            
+
+
+        }
+
+        .container {
+            text-align: center;
+            padding: 125px 20px;
+            padding-bottom: 120px;
+            background-color: #5de5cc4f;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .header {
+            margin-bottom: 5px;
+        }
+
+        .options h1 {
+            color: #27A2C3;
+            font-size: 52px;
+            margin: 0;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .header img {
+            max-width: 650px;
+            height: auto;
+            margin-bottom: 18px;
+        }
+
+        .top-buttons {
+
+            display: flex;
+            gap: 30px;
+            z-index: 3;
+        }
+
+        .top-buttons a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #000;
+            cursor: pointer;
+            transition: color .3s ease-in-out;
+            font-weight: 450;
+
+        }
+
+        .top-buttons a:hover {
+
+            color: #1e86a3;
+
+        }
+        .admin-button {
+
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #555;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            height: 40px;
+            margin-right: 46px;
+            position: relative;
+            top: -8px;
+
+        }
+
+        .admin-button:hover {
+            background-color: #333;
+        }
+
+        .options {
+            margin-top: 30px;
+
+
+        }
+
+        .options button {
+            padding: 16px 20px;
+            margin: 15px;
+            margin-left: 0;
+            font-size: 22px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+            transition: background-color 0.3s ease;
+        }
+
+        .options p,
+        .options div {
+            text-align: left;
+            width: 600px;
+        }
+
+        .options div {
+            margin-top: 60px;
+        }
+
+
+        .login-doctor {
+            background-color: #059691;
+
+        }
+
+        .login-doctor:hover {
+            background-color: #11716e;
+        }
+
+        .login-patient {
+            background-color: #555;
+        }
+
+        .login-patient:hover {
+            background-color: #2a2929d6;
+        }
+
+        .best-care {
+
+            padding: 75px 120px;
+            padding-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .row::before {
+            content: '';
+            position: relative;
+            background: #36f0da55;
+            width: 285px;
+            height: 430px;
+
+        }
+
+        .container2 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main {
+
+            display: flex;
+            position: relative;
+            left: -120px;
+        }
+
+        .image {
+            margin-right: 30px;
+
+        }
+
+        .image1 {
+
+            width: 500px;
+            height: 350px;
+            background-image: url(https://www.pngitem.com/pimgs/m/500-5005106_parents-holding-a-baby-hd-png-download.png);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .image2 {
+
+            width: 470px;
+            height: 350px;
+            background-image: url(https://t3.ftcdn.net/jpg/00/97/37/10/360_F_97371093_uxS80cHLoDW1ornSsxup8VmJpp7Wzfbk.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hover1 {
+            height: 100%;
+            transition: all .4s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hover1 .text {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #333;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+
+        .text i {
+            font-size: 30px;
+            color: white;
+        }
+
+        .hover1:hover {
+            background-color: #36f0b88f;
+        }
+
+        .hover1:hover .text {
+            display: flex;
+
+        }
+
+
+        .about-us {
+            margin-top: 20px;
+            padding: 93px 0px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+
+        }
+
+        .abt {
+
+            background-image: url(https://img.freepik.com/premium-photo/doctor-with-stethoscope_488220-17972.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .abt1 {
+            background-color: #95ffe7d6;
+            padding: 20px 0;
+            padding-bottom: 35px;
+        }
+
+        .about-us h2 {
+            font-size: 40px;
+            color: #27A2C3;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .about-us p {
+            font-size: 19px;
+            line-height: 1.8;
+
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+
+            font-weight: 500;
+        }
+
+        .about-us p::first-letter {
+            font-size: 28px;
+            font-weight: bold;
+            color: #27A2C3;
+        }
+
+        .about-us .divider {
+            width: 80px;
+            height: 4px;
+            background-color: #27A2C3;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        .row1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .box {
+            width: 350px;
+            height: 320px;
+            background-color: #333;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .box i {
+            font-size: 78px;
+        }
+
+        .box:hover {
+            background-color: #4ed5b7;
+            
+        }
+
+
+        .body1 h2 {
+            font-size: 40px;
+            color: #27A2C3;
+            margin-bottom: 20px;
+        }
+
+        .slider-wrapper {
+            overflow: hidden;
+            max-width: 1300px;
+            margin: 0 70px 50px;
+        }
+
+        .card-list .card-item {
+            color: #100f0f;
+            user-select: none;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid #100f0f;
+            border-top-right-radius: 10px;
+            background: rgba(255, 254, 254, 0.859);
+
+        }
+
+        .card-list .card-item .user-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 5px solid #999494;
+            padding: 5px;
+            margin-bottom: 32px;
+        }
+
+        .card-list .card-item .user-name {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .card-list .card-item .review-text {
+            font-size: 18px;
+            font-weight: 500;
+            font-style: italic;
+            text-align: center;
+            margin: 18px 0;
+        }
+
+        .card-list .card-item .review-rating span {
+            color: #ffd700;
+            cursor: pointer;
+        }
+
+        .slider-wrapper .swiper-pagination-bullet {
+            background: #fff;
+            width: 15px;
+            height: 15px;
+        }
+
+        .slider-wrapper .swiper-slider-button {
+            color: #fff;
+            margin-top: -50px;
+            transition: 0.3s ease;
+        }
+
+        .slider-wrapper .swiper-slider-button:hover {
+            color: #ffd700;
+        }
+
+        @media screen and (max-width: 768px) {
+            .slider-wrapper {
+                margin: 0 10px 40px;
+            }
+
+            .slider-wrapper .swiper-slider-button {
+                display: none;
+            }
+        }
+
+        .body1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #a6eadad7;
+        }
+
+        footer {
+            background-color: #100f0f;
+            height: 50px;
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="top-buttons">
+
+            <a href="#home" onclick="changeColor(this)">HomePage</a>
+            <a href="#health" onclick="changeColor(this)">Health</a>
+            <a href="emergency.html" onclick="changeColor(this)">Emergency</a>
+            <a href="pharmacy-list.html" onclick="changeColor(this)">Pharmacy</a>
+            <a href="#about-us" onclick="changeColor(this)">About Us</a>
+            <a href="#service" onclick="changeColor(this)">Services</a>
+            <a href="#review" onclick="changeColor(this)">Review</a>
+            <a href="#contact-us" onclick="changeColor(this)">Contact Us</a>
+
+        </div>
+        <button class="admin-button" onclick="window.location.href = 'admin/login.html'"><i
+                class="fa-solid fa-user"></i></button>
+    </div>
+
+
+    <div class="container" id="home">
+
+        <div class="options">
+            <h1>Health Care</h1>
+            <p style="font-size: 20px; font-weight: 500;">Our system is designed to put your health first, providing you
+                with the care and attention you deserve.</p>
+            <div>
+                <button class="login-doctor" onclick="window.location.href = 'Doctor/login.html'">Login as
+                    Doctor</button>
+                <button class="login-patient" onclick="window.location.href = 'Patient/patientLogin.html'">Login as
+                    Patient</button>
+            </div>
+
+        </div>
+        <div class="header">
+            <img src="https://static.vecteezy.com/system/resources/previews/017/371/947/large_2x/doctor-and-patient-in-hospital-png.png"
+                alt="Health Care Logo">
+
+        </div>
+    </div>
+
+
+    <div class="best-care " id="health">
+        <div class="container2">
+            <h1 class="health_taital" style="font-size: 50px;margin:0;">Best Of Health care for you</h1>
+            <p class="health_text" style="margin-bottom: 30px; font-size: 17px;">Our advanced healthcare system ensures
+                that you receive personalized, high-quality care tailored to your needs. We are committed to your
+                well-being every step of the way.
+            </p>
+            </p>
+
+            <div class="row">
+                <div class="main">
+                    <div class="image image1">
+                        <div class="hover1">
+                            <div class="text"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                        </div>
+                    </div>
+                    <div class="image image2">
+                        <div class="hover1">
+                            <div class="text"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="about-us" class="about-us">
+        <div class="abt">
+            <div class="abt1">
+                <h2>About Us</h2>
+                <div class="divider"></div>
+                <p>
+                    Welcome to the Health Care System. Our mission is to provide accessible, efficient, and reliable
+                    health
+                    services for everyone. With our innovative platform, we connect patients with top medical
+                    professionals,
+                    enabling seamless access to healthcare. Whether
+                    it's scheduling appointments, managing prescriptions, or accessing emergency services, we are here
+                    to
+                    support you at every step of your health journey.
+                </p>
+                <p>
+                    Our team of dedicated professionals ensures the highest standards of care and security for your
+                    medical
+                    information. Thank you for choosing us as your trusted health partner.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="best-care" id="service">
+        <div class="container2" style="margin-bottom: 70px;">
+            <h1 class="health_taital" style="font-size: 50px;margin:0;">Why choose 24hr health care</h1>
+            <p class="health_text" style="margin-bottom: 30px; font-size: 17px;">Health support, available 24/7 for your
+                peace of mind.</p>
+
+            <div class="row1">
+                <div class="main1">
+
+                    <div class="box">
+                        <i class="fa-solid fa-stethoscope"></i>
+                        <h2>Daily care experts</h2>
+                    </div>
+
+
+                    <div class="box" style=" background-color: #4ed5b7;">
+                        <i class="fa-sharp fa-solid fa-phone-volume"></i>
+                        <h2>Available 24/7</h2>
+
+                    </div>
+
+
+                    <div class="box">
+                        <i class="fa-solid fa-wheelchair"></i>
+                        <h2>Balanced care</h2>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body1" id="review">
+        <h2>Customer Review</h2>
+        <div class="containerS swiper">
+            <div class="slider-wrapper">
+                <div class="card-list swiper-wrapper">
+                    <div class="card-item swiper-slide">
+                        <img src="images/user-1.jpg" alt="User Profile" class="user-image" />
+                        <h3 class="user-name">Liam Halrison</h3>
+                        <p class="review-text">"Great experience! The staff was warm and reassuring, and I felt
+                            confident in the care I received. Highly satisfied!"
+                        </p>
+                        <div class="review-rating">
+                            <span class="material-symbols-outlined"> star </span>
+                            <span class="material-symbols-outlined"> star </span>
+                            <span class="material-symbols-outlined"> star </span>
+                            <span class="material-symbols-outlined"> star </span>
+                            <span class="material-symbols-outlined"> star </span>
+                        </div>
+                    </div>
+                    <div class="card-item swiper-slide">
+                        <img src="images/user-2.jpg" alt="User Profile" class="user-image" />
+                        <h3 class="user-name">Sophia Martinez</h3>
+                        <p class="review-text">"Great care during my surgery, especially from the nurses. Wait time in
+                            the ER was long, but overall a good experience."
+                        </p>
+                        <div class="review-rating">
+                            <span class="material-symbols-outlined"> star </span>
+                            <span class="material-symbols-outlined"> star </span>
+                            <span class="material-symbols-outlined"> star </span>
+                            <span class="material-symbols-outlined"> star_half </span>
+                            <span class="material-symbols-outlined"> star_half </span>
+                        </div>
+                    </div>
+                    <div class="card-item swiper-slide">
+                        <img src="images/user-3.jpg" alt="User Profile" class="user-image" />
+                        <h3 class="user-name">James Morgan</h3>
+                        <p class="review-text">"Wonderful hospital! Everyone was kind, and the facilities were clean and
+                            modern. My treatment was excellent!"
+                        </p>
+                        <div class="review-rating">
+                            <span class="material-symbols-outlined"> star </span>
+                            <span class="material-symbols-outlined"> star </span>
+                            <span class="material-symbols-outlined"> star </span>
+                            <span class="material-symbols-outlined"> star </span>
+                            <span class="material-symbols-outlined"> star_half </span>
+                        </div>
+                    </div>
+                    <div class="card-item swiper-slide">
+                        <img src="images/user-4.jpg" alt="User Profile" class="user-image" />
+                        <h3 class="user-name">Grace Foster</h3>
+                        <p class="review-text">"Exceptional service! The doctors and nurses were attentive and
+                            professional. I felt well cared for from start to finish."
+                        </p>
+                        <div class="review-rating">
+                            <span class="material-symbols-outlined"> star </span>
+                            <span class="material-symbols-outlined"> star </span>
+                            <span class="material-symbols-outlined"> star </span>
+                            <span class="material-symbols-outlined"> star </span>
+                            <span class="material-symbols-outlined"> star </span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-slider-button swiper-button-prev"></div>
+                <div class="swiper-slider-button swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Us Section -->
+    <div id="contact-us" class="about-us">
+        <h2>Contact Us</h2>
+        <div class="divider"></div>
+        <p>
+            We value your feedback and are here to assist you with any questions or concerns. Reach out to us through
+            any of the methods below, and our team will respond promptly.
+        </p>
+        <p>
+            <strong>📍 Address:</strong> Asansol<br>
+            <strong>📞 Phone:</strong> +91 1234567890 <br>
+            <strong>📧 Email:</strong> support@healthcare.com<br>
+            <strong>⏰ Hours:</strong> Sunday - Friday: 8 AM to 6 PM
+        </p>
+        <p>
+            Alternatively, use the contact form on this page to leave us a message. We look forward to hearing from you!
+        </p>
+    </div>
+    <footer>
+        <div class="center">
+            Copyright &copy; 2024 All rights reserved!
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        function changeColor(link) {
+            var links = document.querySelectorAll('a');
+            links.forEach(function (l) {
+                l.style.color = '';
+            });
+            link.style.color = '#b1f5ee';
+        }
+
+
+        const swiper = new Swiper(".slider-wrapper", {
+            // Optional parameters
+            loop: true,
+            spaceBetween: 25,
+            grabCursor: true,
+
+            // If we need pagination
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                dynamicBullets: true,
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+
+    </script>
+
+
+</body>
+
+</html>

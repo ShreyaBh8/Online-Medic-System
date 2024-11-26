@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+        <title>Sign In Page</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family: poppins;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #e0e0e0;
+            }
+            .main-div {
+                background-color: white;
+                height: auto;
+                width: 650px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                overflow: hidden;
+                font-size: 20px;
+            }
+            h1 {
+                height: 80px; /* Adjusted height */
+                background-color: #132e8e99;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                font-size: 24px;
+            }
+            .input-div { /* Corrected from input-div to .input-div */
+                padding: 20px; /* Adjusted padding */
+                text-align: center;
+            }
+            .input-div td{
+                padding: 10px;
+            }
+            .input-div input,
+            .input-div select{
+                width: calc(100% - 12px); 
+                height: 40px; 
+                padding: 10px; 
+                font-size: 16px;
+                margin-bottom: 12px; 
+                border: 1px solid #ccc; 
+                border-radius: 5px;
+            }
+            .input-div label {
+                font-size: 16px;
+                font-weight: bold;
+                display: block;
+                text-align: left;
+                margin-bottom: 5px;
+            }
+            .input-div input[type="submit"],
+            .input-div input[type="reset"] {
+                width: 100px;
+                height: 35px;
+                background-color: #132e8e99;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                cursor: pointer;
+                margin-top: 10px;
+                transition: background-color 0.2s ease;
+            }
+            .input-div input[type="submit"]:hover,
+            .input-div input[type="reset"]:hover {
+                background-color: #0b2069;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-div">
+            <h1>Sign Up</h1> <!-- Added a heading for clarity -->
+            <form method="post" action="../docSignIn">
+                <div class="input-div"> <!-- Added class here -->
+                    <table border="0" width="100%"> <!-- Adjusted width to 100% -->
+                        <tr>
+                            <td>Name:</td>
+                            <td><input type="text" name="name" placeholder="Dr. Firstname Lastname" required></td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td><input type="text" name="email" placeholder="Type your email" required></td>
+                        </tr>
+                        <tr>
+                            <td>Password:</td>
+                            <td><input type="password" name="password" required></td>
+                        </tr>
+                        <tr>
+                            <td>Contact:</td>
+                            <td><input type="text" name="contact" placeholder="Type your contact no" required></td>
+                        </tr>
+                        <tr>
+                            <td>Specialist:</td>
+                            <td>
+                                <select name="doctor" required>
+                                    <option value="" selected disabled hidden>Select your specialization</option>
+                                    <option value="Eye Specialist">Eye Specialist</option>
+                                    <option value="Heart Specialist">Heart Specialist</option>
+                                    <option value="Dentist">Dentist</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Degree:</td>
+                            <td><input type="text" name="degree" placeholder="Type your degree" required></td>
+                        </tr>
+                        <tr>
+                            <td>Field:</td>
+                            <td><input type="text" name="field" placeholder="Type your field" required></td>
+                        </tr>
+                        <tr>
+                            <td>Experience:</td>
+                            <td><input type="text" name="experience" placeholder="ex:-12 years" required></td>
+                        </tr>
+                        <tr>
+                            <td>Timing:</td>
+                            <td><input type="text" name="timing" placeholder="ex:-TUE - FRI, 10:00 AM - 5:00 PM" required></td>
+                        </tr>
+                        <tr>
+                            <td>Chamber:</td>
+                            <td><input type="text" name="chamber" placeholder="ex:-Asansol,Kulti,Durgapur" required></td>
+                        </tr>
+                        <tr>
+                            <td>Gender:</td>
+                            <td>
+                                <select name="gender" required>
+                                    <option value="" selected disabled hidden>Select a gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Fees:</td>
+                            <td><input type="text" name="fees" placeholder="ex:- 200" required></td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" value="Submit"></td>
+                            <td><input type="reset" value="Refresh"></td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

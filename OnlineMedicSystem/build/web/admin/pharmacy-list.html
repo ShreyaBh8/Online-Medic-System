@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pharmacy List</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f6f8;
+                display: flex;
+                justify-content: center;
+                padding: 20px;
+                color: #333;
+            }
+
+            .container {
+                max-width: 1400px;
+                width: 100%;
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                overflow: hidden;
+            }
+
+            header {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            header h1 {
+                font-size: 32px;
+                color: #007bff;
+            }
+
+            header p {
+                font-size: 16px;
+                color: #666;
+            }
+
+            .pharmacy-section {
+                margin-top: 30px;
+            }
+
+            .pharmacy-section h2 {
+                font-size: 24px;
+                color: #333;
+                border-bottom: 2px solid #007bff;
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+            }
+
+            .pharmacy-container {
+                display: flex;
+                gap: 20px;
+                overflow-x: auto;
+                padding-bottom: 10px;
+                padding-top: 10px;
+                scrollbar-width: none;
+            }
+
+            .pharmacy-container::-webkit-scrollbar {
+                display: none; 
+            }
+
+            .pharmacy-card {
+                background-color: #e0f7fa;
+                border: 1px solid #b3e5fc;
+                border-radius: 10px;
+                padding: 20px;
+                width: 300px;
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.2s ease;
+            }
+
+            .pharmacy-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .pharmacy-card img {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                margin-right: 20px;
+                object-fit: cover;
+            }
+
+            .pharmacy-info h3 {
+                font-size: 20px;
+                color: #007bff;
+                margin-bottom: 10px;
+            }
+
+            .pharmacy-info p {
+                font-size: 14px;
+                color: #333;
+                margin: 5px 0;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Registered Pharmacies</h1>
+            </header>
+
+            <section class="pharmacy-section">
+                <h2>Available Pharmacies</h2>
+                <div class="pharmacy-container">
+                    <div class="pharmacy-card">
+                        <img src="images/pharmacy.jpg" alt="Pharmacy 1">
+                        <div class="pharmacy-info">
+                            <h3>Green Cross Pharmacy</h3>
+                            <p><strong>Address:</strong> 123 Health St, City</p>
+                            <p><strong>Phone:</strong> +1234567890</p>
+                            <p><strong>Specialty:</strong> General Medicines, OTC</p>
+                            <p><strong>Opening Hours:</strong> 8:00 AM - 8:00 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="pharmacy-card">
+                        <img src="images/pharmacy.jpg" alt="Pharmacy 2">
+                        <div class="pharmacy-info">
+                            <h3>CareWell Pharmacy</h3>
+                            <p><strong>Address:</strong> 456 Wellness Blvd, Town</p>
+                            <p><strong>Phone:</strong> +0987654321</p>
+                            <p><strong>Specialty:</strong> Homeopathy, Herbal</p>
+                            <p><strong>Opening Hours:</strong> 9:00 AM - 9:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

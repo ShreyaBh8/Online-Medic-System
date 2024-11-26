@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+        <title>form 1</title>
+        <style>
+            body {
+                font-family: poppins;
+            }
+
+            body::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100vw;
+                height: 100vh;
+                background: linear-gradient(45deg, #6687dac9, #1ba189bd);
+                z-index: -1;
+            }
+
+            .mainForm {
+                height: 396px;
+                margin-top: 84px;
+                border-radius: 20px;
+                background-color: white;
+                padding: 10px 30px;
+            }
+
+            .container {
+                width: 500px;
+                height: 400px;
+                border: 2px solid transparent;
+                border-radius: 15px;
+                margin: auto;
+                margin-top: 100px;
+                background-color: #1394a3;
+            }
+
+            select,
+            input {
+                display: block;
+                margin: 10px 0;
+                width: 100%;
+                height: 35px;
+                background-color: #c5cfd26e;
+                border-radius: 8px;
+                border: none;
+                outline: none;
+                padding-left: 10px;
+            }
+            
+            .info {
+                margin-top: 20px;
+                margin-right: 20px;
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: #555;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            label {
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            span {
+                color: rgb(228, 11, 11);
+                font-weight: bold;
+            }
+
+            .end {
+                margin-top: 37px;
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+            }
+
+            .end input {
+                background-color: rgba(255, 68, 0, 0.756);
+                width: 150px;
+                color: white;
+                font-size: 17px;
+                border: 2px solid rgba(182, 64, 21, 0.888);
+                padding: 0;
+
+
+            }
+
+            p {
+                color: rgb(228, 11, 11);
+                margin: 0;
+                display: none;
+            }
+
+            h2 {
+                margin-bottom: 16px;
+
+            }
+
+            .top {
+                height: 80px;
+            }
+
+            .age,#mail {
+                width: 97%;
+            }
+
+            @media(max-width:514px) {
+                .container {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+           
+                <a class="info" href="appointmentDetails.html">View Your Appointment Details</a>
+           
+        </div>
+        <div class="container">
+            <form class="mainForm" METHOD="POST" ACTION="../s1">
+                <div class="top">
+                    <h2>Enter your Details</h2>
+                    <p>Please fill all the details</p>
+                </div>
+
+                <div class="department">
+                    <label for="dept">Select department:<span>*</span></label>
+                    <select name="Dept" id="dept">
+                        <option value="" selected disabled hidden>Choose a department...</option>
+                        <option value="Dentist">Dentist</option>
+                        <option value="Heart Specialist">Heart Specialist</option>
+                        <option value="Eye Specialist">Eye Specialist</option>
+                    </select>
+                </div>
+                <div class="age">
+                    <label for="Age">Enter your age:<span>*</span></label>
+                    <input type="text" name="myAge" id="Age" placeholder="Enter your age">
+                </div>
+                <div class="end">
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="Next >>" id="sub">
+
+                </div>
+            </form>
+            <!--        <script>
+                        const p = document.querySelector('p')
+                        const dept = document.querySelector('#dept')
+                        const age = document.querySelector('#Age')
+                        const form = document.querySelector('form')
+                        const fields = [dept, age]
+            
+                        form.addEventListener('submit', (e) => {
+                            if (dept.value == "" || age.value == "") {
+                                e.preventDefault()
+                                p.style.display = 'block'
+                                
+                            }
+                        })
+                        fields.forEach((field) => {
+                            field.addEventListener('focus', () => {
+                                p.style.display = 'none'
+            
+                            })
+                        })
+            
+                    </script>-->
+        </div>
+    </body>
